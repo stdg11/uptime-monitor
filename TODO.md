@@ -1,6 +1,8 @@
 TODO
 ====
 
- * IF statements status codes
- * if OK no output but log + timestamp
- * if down invoke function
+ * Not looping through hosts only first one checked
+ * start threads to check every minute
+ * only send one email until back up
+ * Add timer
+ * web status page for hosts
