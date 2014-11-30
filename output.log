@@ -1,0 +1,70 @@
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Reading hosts from hosts.cfg
+DEBUG:root:Hosts: ['cloud.bourne-grammar.lincs.sch.uk', 'www.bourne-grammar.lincs.sch.uk', 'remote.bourne-grammar.lincs.sch.uk', 'badget.bourne-grammar.lincs.sch.uk']
+INFO:root:Started
+INFO:root:Reading hosts from hosts.cfg
+DEBUG:root:Hosts: ['cloud.bourne-grammar.lincs.sch.uk', 'www.bourne-grammar.lincs.sch.uk', 'remote.bourne-grammar.lincs.sch.uk', 'badget.bourne-grammar.lincs.sch.uk']
+INFO:root:Started
+INFO:root:Reading hosts from hosts.cfg
+DEBUG:root:Hosts: ['http://cloud.bourne-grammar.lincs.sch.uk', 'http://www.bourne-grammar.lincs.sch.uk', 'https://remote.bourne-grammar.lincs.sch.uk', 'http://badget.bourne-grammar.lincs.sch.uk']
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): cloud.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 302 331
+DEBUG:requests.packages.urllib3.connectionpool:"GET /horizon/ HTTP/1.1" 200 760
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): www.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 302 159
+DEBUG:requests.packages.urllib3.connectionpool:"GET /page/default.asp?title=Home&pid=1 HTTP/1.1" 200 35773
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): remote.bourne-grammar.lincs.sch.uk
+INFO:root:Started
+INFO:root:Reading hosts from hosts.cfg
+DEBUG:root:Hosts: ['http://cloud.bourne-grammar.lincs.sch.uk', 'http://www.bourne-grammar.lincs.sch.uk', 'https://remote.bourne-grammar.lincs.sch.uk', 'https://badget.bourne-grammar.lincs.sch.uk']
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): cloud.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 302 331
+DEBUG:requests.packages.urllib3.connectionpool:"GET /horizon/ HTTP/1.1" 200 759
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): www.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 302 159
+DEBUG:requests.packages.urllib3.connectionpool:"GET /page/default.asp?title=Home&pid=1 HTTP/1.1" 200 35773
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): remote.bourne-grammar.lincs.sch.uk
+INFO:root:Started
+INFO:root:Reading hosts from hosts.cfg
+DEBUG:root:Hosts: ['http://cloud.bourne-grammar.lincs.sch.uk', 'http://www.bourne-grammar.lincs.sch.uk', 'https://remote.bourne-grammar.lincs.sch.uk', 'https://badget.bourne-grammar.lincs.sch.uk']
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): cloud.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 302 331
+DEBUG:requests.packages.urllib3.connectionpool:"GET /horizon/ HTTP/1.1" 200 760
+INFO:root:Started
+INFO:root:Reading hosts from hosts.cfg
+DEBUG:root:Hosts: ['http://cloud.bourne-grammar.lincs.sch.uk', 'http://www.bourne-grammar.lincs.sch.uk', 'https://remote.bourne-grammar.lincs.sch.uk', 'https://badget.bourne-grammar.lincs.sch.uk']
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): cloud.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 302 331
+DEBUG:requests.packages.urllib3.connectionpool:"GET /horizon/ HTTP/1.1" 200 760
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): www.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 302 159
+DEBUG:requests.packages.urllib3.connectionpool:"GET /page/default.asp?title=Home&pid=1 HTTP/1.1" 200 35773
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): remote.bourne-grammar.lincs.sch.uk
+INFO:root:Started
+INFO:root:Reading hosts from hosts.cfg
+DEBUG:root:Hosts: ['https://google.co.uk']
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): google.co.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 301 222
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.google.co.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 302 232
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): www.google.co.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET /?gws_rd=ssl HTTP/1.1" 200 None
