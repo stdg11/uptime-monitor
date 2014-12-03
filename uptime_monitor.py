@@ -72,7 +72,7 @@ def hostCheck():
                 print(error)
                 onError(host,error)
         writeHTML(hostlist)
-        time.sleep(10)
+        time.sleep(60)
 
 def onError(host,error):
     hostlist[host] = True
@@ -84,7 +84,7 @@ def onError(host,error):
 
 def hostError():
     while True:
-        time.sleep(10)
+        time.sleep(60)
         for host,isdown in hostlist.items():
             try:
                 check = requests.get(host)
