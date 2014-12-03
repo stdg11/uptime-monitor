@@ -9,15 +9,19 @@ parser.read('config.ini')
 #Server to check
 hostsfile = 'hosts.cfg'
 #Downtime hostlist
-down_hosts = []
+hostlist = {}
+notified = ['']
 
 # Check if users file exists, if not throw error
 def hostLoad():
     if os.path.isfile(hostsfile):
         logging.info('Reading hosts from %s', hostsfile)
-        hostlist = [line.strip() for line in open(hostsfile)]
-        logging.debug('Hosts: %s', hostlist)
-        return(hostlist)
+        with open(hostsfile, 'r') as hosts:
+            for line in hosts:
+                line = line.replace("\n","")
+                hostlist[line] = False
+            #print(hostlist)
+            logging.debug('Hosts: %s', hostlist)
     else:
         logging.error("Cannot find file specified, please try again.", exc_info=True)
 
@@ -38,58 +42,64 @@ def notify(host, status, error):
         message = header + input_message
         smtpserver.sendmail(mail_user, mail_to, message)
         smtpserver.close
+        print("Email sent to {}".format(mail_to))
     except:
         smtp_error = ("{} exception {}".format(datetime.datetime.now(),sys.exc_info()[0]))
         logging.error(smtp_error)
-        print(smtp_error)
+        print("Error sending mail: {}".format(smtp_error))
 
 def hostCheck():
     while True:
-        for host in hostlist:
+        print('Running Check...')
+        for host,isdown in hostlist.items():
             try:
                 check = requests.get(host)
                 hostcode = check.status_code
                 if hostcode == requests.codes.ok:
                     logging.info("{} {} returned status code {}".format(datetime.datetime.now(),host,hostcode))
-                    return(host, "Site OK")
-                    #time.sleep(60)
+                    hostlist[host] = False
+                    #print(hostlist[host])
                 else:
                     error = ("{} ERROR! {} returned status code {}".format(datetime.datetime.now(),host,hostcode))
                     logging.error(error)
                     onError(host,error)
+            except KeyboardInterrupt:
+                break
             except:
                 error = ("{} {} exception {}".format(datetime.datetime.now(),host,sys.exc_info()[0]))
                 logging.error(error)
                 onError(host,error)
+            time.sleep(10)
 
 def onError(host,error):
-    down_hosts.append(host)
-    hostlist.remove(host)
-    logging.info(host, "-Added to Downtime monitor")
-    notify(host, "DOWN!", error)
-    return(host, "DOWN!")
+    hostlist[host] = True
+    print(error)
+    if host not in notified:
+        notify(host, "DOWN!", error)
+        notified.append(host)
+    else:
+        print("Notification already sent")
 
 def hostError():
     while True:
         #time.sleep(120)
-        for host in down_hosts:
+        for host,isdown in hostlist.items():
             try:
                 check = requests.get(host)
                 hostcode = check.status_code
                 if hostcode == requests.codes.ok:
                     error = ("{} {} Site back UP!".format(datetime.datetime.now(),host))
                     logging.info(error)
-                    hostlist.append(host)
-                    down_hosts.remove(host)
+                    hostlist[host] = False
                     notify(host,"UP!",error)
                 else:
                     print("{} Still DOWN!".format(host))
             except:
                 print("{} Still DOWN!".format(host))
 
-hostlist = hostLoad()
-print(hostCheck())
-print(hostError())
+hostLoad()
+hostCheck()
+#print(hostError())
 #tup = Thread(target = hostCheck)
 #tdown = Thread(target = hostError)
 #tup.start()
