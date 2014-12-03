@@ -70,6 +70,7 @@ def hostCheck():
                 error = ("{} {} exception {}".format(datetime.datetime.now(),host,sys.exc_info()[0]))
                 logging.error(error)
                 print(error)
+                onError(host,error)
         writeHTML(hostlist)
         time.sleep(10)
 
@@ -99,11 +100,18 @@ def hostError():
                 print("{} Still DOWN!".format(host))
 
 def writeHTML(hostlist):
-    text = "<html>\n<body>"
-    for host in hostlist.items():
-        #print("yo {}".format(host))
-        text += "<p>{}</p>".format(host)
-    text += "</body>\n</html>"
+    header = open("templates/header.html", "r")
+    footer = open("templates/footer.html", "r")
+    headerCont = header.read()
+    footerCont = footer.read()
+    text = headerCont
+    for host in hostlist:
+        if hostlist[host] == False:
+            upORdown = 'UP'
+        elif hostlist[host] == True:
+            upORdown = 'DOWN'
+        text += "<p>{} is {}</p>".format(host, upORdown)
+    text += footerCont
     print(text)
     f = open("index.html","w")
     f.write(text)
