@@ -59,7 +59,7 @@ def hostCheck():
                 if hostcode == requests.codes.ok:
                     logging.info("{} {} returned status code {}".format(datetime.datetime.now(),host,hostcode))
                     hostlist[host] = False
-                    #print(hostlist[host])
+                    #writeHTML(host, isdown)
                 else:
                     error = ("{} ERROR! {} returned status code {}".format(datetime.datetime.now(),host,hostcode))
                     logging.error(error)
@@ -69,16 +69,17 @@ def hostCheck():
             except:
                 error = ("{} {} exception {}".format(datetime.datetime.now(),host,sys.exc_info()[0]))
                 logging.error(error)
-                onError(host,error)
+                print(error)
+        writeHTML(hostlist)
         time.sleep(10)
 
 def onError(host,error):
     hostlist[host] = True
     print(error)
-    if host not in notified:
-        notify(host, "DOWN!", error)
-    else:
-        print("Notification already sent")
+    #if host not in notified:
+    #    notify(host, "DOWN!", error)
+    #else:
+    #    print("Notification already sent")
 
 def hostError():
     while True:
@@ -92,11 +93,21 @@ def hostError():
                     logging.info(error)
                     hostlist[host] = False
                     notify(host,"UP!",error)
-                    notified.remove(host)
                 else:
                     print("{} Still DOWN!".format(host))
             except:
                 print("{} Still DOWN!".format(host))
 
-tup.start()
-tdown.start()
+def writeHTML(hostlist):
+    text = "<html>\n<body>"
+    for host in hostlist.items():
+        #print("yo {}".format(host))
+        text += "<p>{}</p>".format(host)
+    text += "</body>\n</html>"
+    print(text)
+    f = open("index.html","w")
+    f.write(text)
+    f.close()
+
+hostLoad()
+hostCheck()
