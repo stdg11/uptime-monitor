@@ -43,6 +43,7 @@ def notify(host, status, error):
         smtpserver.sendmail(mail_user, mail_to, message)
         smtpserver.close
         print("Email sent to {}".format(mail_to))
+        notified.append(host)
     except:
         smtp_error = ("{} exception {}".format(datetime.datetime.now(),sys.exc_info()[0]))
         logging.error(smtp_error)
@@ -69,20 +70,19 @@ def hostCheck():
                 error = ("{} {} exception {}".format(datetime.datetime.now(),host,sys.exc_info()[0]))
                 logging.error(error)
                 onError(host,error)
-            time.sleep(10)
+        time.sleep(10)
 
 def onError(host,error):
     hostlist[host] = True
     print(error)
     if host not in notified:
         notify(host, "DOWN!", error)
-        notified.append(host)
     else:
         print("Notification already sent")
 
 def hostError():
     while True:
-        #time.sleep(120)
+        time.sleep(10)
         for host,isdown in hostlist.items():
             try:
                 check = requests.get(host)
@@ -92,15 +92,11 @@ def hostError():
                     logging.info(error)
                     hostlist[host] = False
                     notify(host,"UP!",error)
+                    notified.remove(host)
                 else:
                     print("{} Still DOWN!".format(host))
             except:
                 print("{} Still DOWN!".format(host))
 
-hostLoad()
-hostCheck()
-#print(hostError())
-#tup = Thread(target = hostCheck)
-#tdown = Thread(target = hostError)
-#tup.start()
-#tdown.start()
+tup.start()
+tdown.start()
