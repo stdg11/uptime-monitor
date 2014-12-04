@@ -1,0 +1,18 @@
+.strip{
+	background-color:#cc0000;
+	height:6px;
+	width:100%;
+}
+
+.navbar-inverse {
+      border-color: #cc0000;!important
+}
+
+.form-control {
+    width:65%;!important
+    float:left;
+    display:inline;!important
+}
+.btn{
+  float:right;
+}

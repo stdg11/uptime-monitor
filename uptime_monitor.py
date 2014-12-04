@@ -77,10 +77,10 @@ def hostCheck():
 def onError(host,error):
     hostlist[host] = True
     print(error)
-    #if host not in notified:
-    #    notify(host, "DOWN!", error)
-    #else:
-    #    print("Notification already sent")
+    if host not in notified:
+        notify(host, "DOWN!", error)
+    else:
+        print("Notification already sent")
 
 def hostError():
     while True:
@@ -112,9 +112,10 @@ def writeHTML(hostlist):
         elif hostlist[host] == True:
             upORdown = 'DOWN'
             colour = 'danger'
-        text += '<tr class="{}"><td>{}</td><td>{}</td></tr>'.format(colour, host, upORdown)
+        shortname = 'Webmail'
+        text += '<tr class="{}"><td>{}</td><td>{}</td><td>{}</td></tr>'.format(colour, shortname, host, upORdown)
     text += footerCont
-    f = open("index.html","w")
+    f = open("html/status.html","w")
     f.write(text)
     f.close()
 
