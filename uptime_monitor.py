@@ -19,8 +19,11 @@ def hostLoad():
         with open(hostsfile, 'r') as hosts:
             for line in hosts:
                 line = line.replace("\n","")
-                hostlist[line] = False
-            #print(hostlist)
+                servicehost = line.split(',')
+                service = servicehost[0]
+                host = servicehost[1]
+                hostlist[host] = [service , False]
+            print(hostlist)
             logging.debug('Hosts: %s', hostlist)
     else:
         logging.error("Cannot find file specified, please try again.", exc_info=True)
@@ -77,10 +80,10 @@ def hostCheck():
 def onError(host,error):
     hostlist[host] = True
     print(error)
-    if host not in notified:
-        notify(host, "DOWN!", error)
-    else:
-        print("Notification already sent")
+    #if host not in notified:
+    #    notify(host, "DOWN!", error)
+    #else:
+    #    print("Notification already sent")
 
 def hostError():
     while True:
@@ -112,8 +115,8 @@ def writeHTML(hostlist):
         elif hostlist[host] == True:
             upORdown = 'DOWN'
             colour = 'danger'
-        shortname = 'Webmail'
-        text += '<tr class="{}"><td>{}</td><td>{}</td><td>{}</td></tr>'.format(colour, shortname, host, upORdown)
+            service = hostlist[host]
+        text += '<tr class="{}"><td>{}</td><td>{}</td><td>{}</td></tr>'.format(colour, service, host, upORdown)
     text += footerCont
     f = open("html/status.html","w")
     f.write(text)
