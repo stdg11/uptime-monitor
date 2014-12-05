@@ -61,7 +61,7 @@ def hostCheck():
                 hostcode = check.status_code
                 if hostcode == requests.codes.ok:
                     logging.info("{} {} returned status code {}".format(datetime.datetime.now(),host,hostcode))
-                    hostlist[host] = False
+                    hostlist[host][1] = 0
                     #writeHTML(host, isdown)
                 else:
                     error = ("{} ERROR! {} returned status code {}".format(datetime.datetime.now(),host,hostcode))
@@ -78,7 +78,7 @@ def hostCheck():
         time.sleep(60)
 
 def onError(host,error):
-    hostlist[host] = True
+    hostlist[host][1] = 1
     print(error)
     #if host not in notified:
     #    notify(host, "DOWN!", error)
@@ -88,14 +88,14 @@ def onError(host,error):
 def hostError():
     while True:
         time.sleep(60)
-        for host,isdown in hostlist.items():
+        for host,service,isdown in hostlist.items():
             try:
                 check = requests.get(host)
                 hostcode = check.status_code
                 if hostcode == requests.codes.ok:
                     error = ("{} {} Site back UP!".format(datetime.datetime.now(),host))
                     logging.info(error)
-                    hostlist[host] = False
+                    #hostlist[host] = False
                     notify(host,"UP!",error)
                 else:
                     print("{} Still DOWN!".format(host))
@@ -109,14 +109,13 @@ def writeHTML(hostlist):
     footerCont = footer.read()
     text = headerCont
     for host in hostlist:
-        if hostlist[host] == False:
+        if hostlist[host][1] == 0:
             upORdown = 'UP'
             colour = 'success'
-        elif hostlist[host] == True:
+        elif hostlist[host][1] == 1:
             upORdown = 'DOWN'
             colour = 'danger'
-            service = hostlist[host]
-        text += '<tr class="{}"><td>{}</td><td>{}</td><td>{}</td></tr>'.format(colour, service, host, upORdown)
+        text += '<tr class="{}"><td>{}</td><td>{}</td><td>{}</td></tr>'.format(colour, hostlist[host][0], host, upORdown)
     text += footerCont
     f = open("html/status.html","w")
     f.write(text)
