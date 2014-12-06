@@ -2392,3 +2392,248 @@ DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 587
 INFO:root:2014-12-05 16:35:14.831178 https://webmail.bourne-grammar.lincs.sch.uk returned status code 200
 INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): fakesrtneneid.com
 ERROR:root:2014-12-05 16:35:14.837434 http://fakesrtneneid.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): remote.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 2990
+INFO:root:2014-12-05 16:36:14.912758 https://remote.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetoinvent.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-05 16:36:15.019115 https://bournetoinvent.com returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): badget.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-05 16:36:15.052558 https://badget.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetocode.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-05 16:36:15.154700 https://bournetocode.com returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): frog.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-05 16:36:15.418461 https://frog.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetohack.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-05 16:36:15.550233 https://bournetohack.com returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): cloud.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 302 331
+DEBUG:requests.packages.urllib3.connectionpool:"GET /horizon/ HTTP/1.1" 200 758
+INFO:root:2014-12-05 16:36:15.589209 http://cloud.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): www.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 302 159
+DEBUG:requests.packages.urllib3.connectionpool:"GET /page/default.asp?title=Home&pid=1 HTTP/1.1" 200 36442
+INFO:root:2014-12-05 16:36:15.729325 http://www.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): webmail.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 587
+INFO:root:2014-12-05 16:36:15.763626 https://webmail.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): fakesrtneneid.com
+ERROR:root:2014-12-05 16:36:15.766719 http://fakesrtneneid.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:root:Started
+INFO:root:Reading hosts from hosts.cfg
+DEBUG:root:Hosts: {'https://bournetoinvent.com': ['Systems Website', False], 'http://www.bourne-grammar.lincs.sch.uk': ['School Website', False], 'https://bournetohack.com': ['Computing Blog', False], 'https://webmail.bourne-grammar.lincs.sch.uk': ['Webmail', False], 'http://fakesrtneneid.com': ['Fake Site', False], 'https://remote.bourne-grammar.lincs.sch.uk': ['WebDav', False], 'https://frog.bourne-grammar.lincs.sch.uk': ['Frog', False], 'https://badget.bourne-grammar.lincs.sch.uk': ['Badget', False], 'https://bournetocode.com': ['Computing Website', False], 'http://cloud.bourne-grammar.lincs.sch.uk': ['OpenStack', False]}
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetoinvent.com
+ERROR:root:2014-12-06 14:06:40.650187 https://bournetoinvent.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): www.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:06:40.652840 http://www.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetohack.com
+ERROR:root:2014-12-06 14:06:40.654879 https://bournetohack.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): webmail.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:06:40.657121 https://webmail.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): fakesrtneneid.com
+ERROR:root:2014-12-06 14:06:40.659938 http://fakesrtneneid.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): remote.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:06:40.662254 https://remote.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): frog.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:06:40.664590 https://frog.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): badget.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:06:40.667177 https://badget.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetocode.com
+ERROR:root:2014-12-06 14:06:40.669770 https://bournetocode.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): cloud.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:06:40.672713 http://cloud.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetoinvent.com
+ERROR:root:2014-12-06 14:07:40.678245 https://bournetoinvent.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): www.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:07:40.680981 http://www.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetohack.com
+ERROR:root:2014-12-06 14:07:40.683496 https://bournetohack.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): webmail.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:07:40.685933 https://webmail.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): fakesrtneneid.com
+ERROR:root:2014-12-06 14:07:40.689487 http://fakesrtneneid.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): remote.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:07:40.691874 https://remote.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): frog.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:07:40.694218 https://frog.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): badget.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:07:40.696285 https://badget.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetocode.com
+ERROR:root:2014-12-06 14:07:40.698329 https://bournetocode.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): cloud.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:07:40.700480 http://cloud.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetoinvent.com
+ERROR:root:2014-12-06 14:08:40.709300 https://bournetoinvent.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): www.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:08:40.712023 http://www.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetohack.com
+ERROR:root:2014-12-06 14:08:40.714502 https://bournetohack.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): webmail.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:08:40.717011 https://webmail.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): fakesrtneneid.com
+ERROR:root:2014-12-06 14:08:40.719597 http://fakesrtneneid.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): remote.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:08:40.722459 https://remote.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): frog.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:08:40.724961 https://frog.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): badget.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:08:40.727124 https://badget.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetocode.com
+ERROR:root:2014-12-06 14:08:40.729167 https://bournetocode.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): cloud.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:08:40.731505 http://cloud.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetoinvent.com
+ERROR:root:2014-12-06 14:09:40.736028 https://bournetoinvent.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): www.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:09:40.739834 http://www.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetohack.com
+ERROR:root:2014-12-06 14:09:40.742424 https://bournetohack.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): webmail.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:09:40.744880 https://webmail.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): fakesrtneneid.com
+ERROR:root:2014-12-06 14:09:40.747426 http://fakesrtneneid.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): remote.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:09:40.749867 https://remote.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): frog.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:09:40.752312 https://frog.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): badget.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:09:40.755912 https://badget.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetocode.com
+ERROR:root:2014-12-06 14:09:40.758165 https://bournetocode.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): cloud.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:09:40.760293 http://cloud.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetoinvent.com
+ERROR:root:2014-12-06 14:10:40.768753 https://bournetoinvent.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): www.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:10:40.771498 http://www.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetohack.com
+ERROR:root:2014-12-06 14:10:40.774467 https://bournetohack.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): webmail.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:10:40.777040 https://webmail.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): fakesrtneneid.com
+ERROR:root:2014-12-06 14:10:40.779633 http://fakesrtneneid.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): remote.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:10:40.782074 https://remote.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): frog.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:10:40.784552 https://frog.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): badget.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:10:40.787011 https://badget.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetocode.com
+ERROR:root:2014-12-06 14:10:40.790432 https://bournetocode.com exception <class 'requests.exceptions.ConnectionError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): cloud.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 14:10:40.792626 http://cloud.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.ConnectionError'>
+INFO:root:Started
+INFO:root:Started
+INFO:root:Reading hosts from hosts.cfg
+DEBUG:root:Hosts: {'https://webmail.bourne-grammar.lincs.sch.uk': ['Webmail', False], 'https://frog.bourne-grammar.lincs.sch.uk': ['Frog', False], 'http://cloud.bourne-grammar.lincs.sch.uk': ['OpenStack', False], 'https://bournetohack.com': ['Computing Blog', False], 'http://fakesrtneneid.com': ['Fake Site', False], 'https://badget.bourne-grammar.lincs.sch.uk': ['Badget', False], 'http://www.bourne-grammar.lincs.sch.uk': ['School Website', False], 'https://bournetocode.com': ['Computing Website', False], 'https://remote.bourne-grammar.lincs.sch.uk': ['WebDav', False], 'https://bournetoinvent.com': ['Systems Website', False]}
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): webmail.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 587
+INFO:root:2014-12-06 15:41:22.510568 https://webmail.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): frog.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 15:41:24.102759 https://frog.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): cloud.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 302 331
+DEBUG:requests.packages.urllib3.connectionpool:"GET /horizon/ HTTP/1.1" 200 759
+INFO:root:2014-12-06 15:41:24.635568 http://cloud.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetohack.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 15:41:25.179605 https://bournetohack.com returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): fakesrtneneid.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 15:41:25.614355 http://fakesrtneneid.com returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): badget.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 15:41:25.927159 https://badget.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): www.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 302 159
+DEBUG:requests.packages.urllib3.connectionpool:"GET /page/default.asp?title=Home&pid=1 HTTP/1.1" 200 36442
+INFO:root:2014-12-06 15:41:28.612558 http://www.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetocode.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 15:41:29.107451 https://bournetocode.com returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): remote.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 15:41:29.343810 https://remote.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.SSLError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetoinvent.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 15:41:30.024865 https://bournetoinvent.com returned status code 200
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Started
+INFO:root:Reading hosts from hosts.cfg
+DEBUG:root:Hosts: {'https://webmail.bourne-grammar.lincs.sch.uk': ['Webmail', False], 'https://bournetoinvent.com': ['Systems Website', False], 'http://www.bourne-grammar.lincs.sch.uk': ['School Website', False], 'https://badget.bourne-grammar.lincs.sch.uk': ['Badget', False], 'https://bournetocode.com': ['Computing Website', False], 'https://frog.bourne-grammar.lincs.sch.uk': ['Frog', False], 'http://fakesrtneneid.com': ['Fake Site', False], 'https://bournetohack.com': ['Computing Blog', False], 'http://cloud.bourne-grammar.lincs.sch.uk': ['OpenStack', False], 'https://remote.bourne-grammar.lincs.sch.uk': ['WebDav', False]}
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): webmail.bourne-grammar.lincs.sch.uk
+INFO:root:Started
+INFO:root:Reading hosts from hosts.cfg
+DEBUG:root:Hosts: {'http://fakesrtneneid.com': ['Fake Site', False], 'https://badget.bourne-grammar.lincs.sch.uk': ['Badget', False], 'https://bournetocode.com': ['Computing Website', False], 'https://bournetohack.com': ['Computing Blog', False], 'https://remote.bourne-grammar.lincs.sch.uk': ['WebDav', False], 'http://www.bourne-grammar.lincs.sch.uk': ['School Website', False], 'http://cloud.bourne-grammar.lincs.sch.uk': ['OpenStack', False], 'https://webmail.bourne-grammar.lincs.sch.uk': ['Webmail', False], 'https://frog.bourne-grammar.lincs.sch.uk': ['Frog', False], 'https://bournetoinvent.com': ['Systems Website', False]}
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): fakesrtneneid.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 16:11:11.816275 http://fakesrtneneid.com returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): badget.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 16:11:12.359593 https://badget.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetocode.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 16:11:13.397529 https://bournetocode.com returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetohack.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 16:11:16.297657 https://bournetohack.com returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): remote.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 16:11:16.463897 https://remote.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.SSLError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): www.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 302 159
+DEBUG:requests.packages.urllib3.connectionpool:"GET /page/default.asp?title=Home&pid=1 HTTP/1.1" 200 36442
+INFO:root:2014-12-06 16:11:16.831154 http://www.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): cloud.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 302 331
+DEBUG:requests.packages.urllib3.connectionpool:"GET /horizon/ HTTP/1.1" 200 761
+INFO:root:2014-12-06 16:11:17.038138 http://cloud.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): webmail.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 587
+INFO:root:2014-12-06 16:11:17.265346 https://webmail.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): frog.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 16:11:17.959011 https://frog.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetoinvent.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 16:11:19.757092 https://bournetoinvent.com returned status code 200
+INFO:root:Started
+INFO:root:Reading hosts from hosts.cfg
+DEBUG:root:Hosts: {'https://badget.bourne-grammar.lincs.sch.uk': ['Badget', False], 'https://frog.bourne-grammar.lincs.sch.uk': ['Frog', False], 'http://fakesrtneneid.com': ['Fake Site', False], 'https://remote.bourne-grammar.lincs.sch.uk': ['WebDav', False], 'https://bournetocode.com': ['Computing Website', False], 'https://bournetoinvent.com': ['Systems Website', False], 'https://webmail.bourne-grammar.lincs.sch.uk': ['Webmail', False], 'http://cloud.bourne-grammar.lincs.sch.uk': ['OpenStack', False], 'http://www.bourne-grammar.lincs.sch.uk': ['School Website', False], 'https://bournetohack.com': ['Computing Blog', False]}
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): badget.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 16:38:01.184669 https://badget.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): frog.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 16:38:01.671009 https://frog.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): fakesrtneneid.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 16:38:01.829795 http://fakesrtneneid.com returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): remote.bourne-grammar.lincs.sch.uk
+ERROR:root:2014-12-06 16:38:01.984734 https://remote.bourne-grammar.lincs.sch.uk exception <class 'requests.exceptions.SSLError'>
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetocode.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 16:38:02.372204 https://bournetocode.com returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetoinvent.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 16:38:03.146596 https://bournetoinvent.com returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): webmail.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 587
+INFO:root:2014-12-06 16:38:03.382247 https://webmail.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): cloud.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 302 331
+DEBUG:requests.packages.urllib3.connectionpool:"GET /horizon/ HTTP/1.1" 200 760
+INFO:root:2014-12-06 16:38:03.552903 http://cloud.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): www.bourne-grammar.lincs.sch.uk
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 302 159
+DEBUG:requests.packages.urllib3.connectionpool:"GET /page/default.asp?title=Home&pid=1 HTTP/1.1" 200 36442
+INFO:root:2014-12-06 16:38:03.871038 http://www.bourne-grammar.lincs.sch.uk returned status code 200
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): bournetohack.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+INFO:root:2014-12-06 16:38:04.333182 https://bournetohack.com returned status code 200
