@@ -11,3 +11,4 @@ TODO
  * <del>keep status of site in one tuple/dict [{site, isup},{remote.bo...,True}]</del>
 
  * onError email restored
+ * Base URL for rewrites (<base href="">)
